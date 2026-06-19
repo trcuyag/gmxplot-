@@ -47,8 +47,8 @@ tkinter is included with Python by default – no extra installation is needed.
 bash
 python3.12 -m venv gmxplot_env
 source gmxplot_env/bin/activate   # On Linux/macOS
-# or
 gmxplot_env\Scripts\activate      # On Windows
+
 3.2 Install Dependencies
 You can install all required packages with a single command:
 
@@ -200,7 +200,7 @@ Seaborn colour palettes guide
 
 SciencePlots – journal styles for Matplotlib
 
-![Figure 1] (gmxplot1.png)
-![Figure 2] (gmxplot2.png)
-![Figure 3] (gmxplot3.png)
+![Figure 1](gmxplot1.png)
+![Figure 2](gmxplot2.png)
+![Figure 3](gmxplot3.png)
 
