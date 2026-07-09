@@ -1,3 +1,5 @@
+We recomended use the last version of  gmxplot v1.1
+
 Author: Teobaldo Cuya
 Dep. of Physics, Mathematics and Computing
 Faculty of Tecnhology
