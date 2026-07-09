@@ -1,4 +1,4 @@
-We recomended use the last version of  gmxplot v1.1
+We recommend using the latest version of gmxplot (v1.1), as new features have been added.
 
 Author: Teobaldo Cuya
 Dep. of Physics, Mathematics and Computing
