@@ -53,12 +53,6 @@ gmxplot answers these questions in a few clicks, without requiring command‑lin
 - Required: `numpy`, `pandas`, `matplotlib`, `scipy`, `statsmodels`
 - Optional (but recommended): `seaborn`, `scikit-learn`, `nolds`, `customtkinter`
 
-Install with pip:
-
-```bash
-pip install numpy pandas matplotlib scipy statsmodels seaborn scikit-learn nolds customtkinter
-Note: If customtkinter is not installed, the GUI falls back to standard Tkinter.
-
 Run the program
 bash
 python gmxplot.py
@@ -109,23 +103,24 @@ The result is displayed on the plot with the formula.
 From the "Advanced Analysis" dropdown, choose one of the many methods (see list below). Then click "RUN ADVANCED ANALYSIS".
 
 Analysis	What it does
-SEM Evolution	Plots standard error of the mean vs. time – helps assess convergence.
-Block Convergence	Divides the trajectory into blocks; plots block means with error bars.
-Outlier Detection	Marks points deviating >3σ from the mean.
-Cross‑correlation	(Select two Y columns or two files) – computes correlation vs. lag.
-FFT Spectrum	Power spectrum of the signal to identify periodic motions.
-Hurst Exponent (DFA)	Quantifies long‑range memory (persistent/anti‑persistent behaviour).
-Distribution Comparison	Compares first vs. second half using KS test and overlaid histograms.
-Correlation Matrix	(Select two files or multiple columns) – Pearson correlation heatmap.
-PMF (Energy Profile)	Free energy as a function of the selected coordinate (in kT).
-Clustering (k‑means)	Groups frames into clusters based on the time series (raw or smoothed).
-PCA (Principal Components)	Projects multidimensional data onto principal components.
-Error vs Sampling Interval	Shows how subsampling affects the error – helps choose saving frequency.
-3D Visualization	(Select two Y columns or two files) – time vs. two properties in 3D.
-Export Stats (LaTeX/CSV)	Generates a LaTeX table with mean, error, and effective sample size.
-Fitting (linear)	Fits a straight line to the entire series.
-Sample Entropy (ApEn)	Measures signal complexity (chaotic vs. regular).
-Variance Evolution	Sliding‑window variance – detects changes in flexibility.
+**SEM** Evolution	Plots standard error of the mean vs. time – helps assess convergence.
+**Block** Convergence	Divides the trajectory into blocks; plots block means with error bars.
+**Outlier Detection**	Marks points deviating >3σ from the mean.
+**Cross‑correlation**	(Select two Y columns or two files) – computes correlation vs. lag.
+**FFT Spectrum**	Power spectrum of the signal to identify periodic motions.
+**Hurst Exponent (DFA)**	Quantifies long‑range memory (persistent/anti‑persistent behaviour).
+**Distribution Comparison**	Compares first vs. second half using KS test and overlaid histograms.
+**Correlation Matrix**	(Select two files or multiple columns) – Pearson correlation heatmap.
+**PMF (Energy Profile)**	Free energy as a function of the selected coordinate (in kT).
+**Clustering (k‑means)**	Groups frames into clusters based on the time series (raw or smoothed).
+**PCA (Principal Components)**	Projects multidimensional data onto principal components.
+**Error vs Sampling Interval**	Shows how subsampling affects the error – helps choose saving frequency.
+**3D Visualization**	(Select two Y columns or two files) – time vs. two properties in 3D.
+**Export Stats (LaTeX/CSV)**	Generates a LaTeX table with mean, error, and effective sample size.
+**Fitting (linear)**	Fits a straight line to the entire series.
+**Sample Entropy (ApEn)**	Measures signal complexity (chaotic vs. regular).
+**Variance Evolution**	Sliding‑window variance – detects changes in flexibility.
+
 For Cross‑correlation, Correlation Matrix, and 3D Visualization you can either:
 
 Use a single loaded file with two Y columns, or
@@ -151,11 +146,11 @@ gmx energy -f ener.edr -o energy.xvg
 # Then select the energy terms you want (e.g., Potential, Temperature)
 Autocorrelation function (ACF)
 bash
-gmx acf -f rmsd.xvg -o acf.xvg
+gmx analyze -f file.xvg -ac ac.xvg
 # This computes the ACF of the property; useful for correlation time.
 Hydrogen bonds
 bash
-gmx hbond -s topol.tpr -f traj.xtc -num hbonds.xvg
+gmx hbond-legacy -s topol.tpr -f traj.xtc -num hbonds.xvg 
 Distance between two groups
 bash
 gmx distance -s topol.tpr -f traj.xtc -o dist.xvg -select 'residue 10' -select 'residue 20'
@@ -188,24 +183,23 @@ Export the plots and stats for your manuscript.
 📝 How to Cite
 If you use gmxplot in your research, please cite:
 
-Cuya, T. (2020). gmxplot: Advanced Statistical Analysis for GROMACS XVG Files. Zenodo. https://doi.org/10.5281/zenodo.20779020
+Cuya, T. (2026). gmxplot: Advanced Statistical Analysis for GROMACS XVG Files. Zenodo. https://doi.org/10.5281/zenodo.20779020
 
 
 🙏 Acknowledgements
 This software was developed at the Laboratório de Computação Avançada em Modelagem Molecular (LCAMM) ,
 Faculty of Technology, Rio de Janeiro State University (UERJ) , Brazil.
-
 We thank the GROMACS community for providing the simulation engine that generates the data this tool analyses.
+We thank to the free software developers
 
 ⚖️ License
 gmxplot is distributed under the GNU General Public License v3.0.
 See the LICENSE file for details.
 
-📬 Contact & Support
-For questions, bug reports, or feature requests, please open an issue on the GitHub repository or contact the author at teobaldo.cuya@uerj.br.
-
 
 ![Figure 1](gmxplot1.png)
 ![Figure 2](gmxplot2.png)
 ![Figure 3](gmxplot3.png)
-
+![Figure 4](gmxplot4.png)
+![Figure 5](gmxplot5.png)
+![Figure 6](gmxplot6.png)
