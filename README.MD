@@ -197,9 +197,9 @@ gmxplot is distributed under the GNU General Public License v3.0.
 See the LICENSE file for details.
 
 
-![Figure 1](gmxplot1.png)
-![Figure 2](gmxplot2.png)
-![Figure 3](gmxplot3.png)
-![Figure 4](gmxplot4.png)
-![Figure 5](gmxplot5.png)
-![Figure 6](gmxplot6.png)
+![Figure 1](Figure1.png)
+![Figure 2](Figure2.png)
+![Figure 3](Figure3.png)
+![Figure 4](Figure4.png)
+![Figure 5](Figure5.png)
+![Figure 6](Figure6.png)
